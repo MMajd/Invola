@@ -2,6 +2,7 @@ package com.invola.system.adapter.out.persistence;
 
 import java.util.Set;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
@@ -16,6 +17,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserEntity {
     @Id
+    @Column(name = "user_email")
     private String email;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
