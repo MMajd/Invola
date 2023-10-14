@@ -1,9 +1,10 @@
-package com.invola.system.adapter.in.web;
+package com.invola.system.adapter.in.web.controller;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.invola.system.adapter.in.web.dto.AddStoryDto;
 import com.invola.system.application.domain.model.User.UserEmail;
 import com.invola.system.application.port.in.AddStoryUseCase;
 import com.invola.system.application.port.in.AddStoryUseCase.AddStoryCommand;

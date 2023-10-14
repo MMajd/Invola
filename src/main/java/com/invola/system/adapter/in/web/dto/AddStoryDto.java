@@ -1,4 +1,4 @@
-package com.invola.system.adapter.in.web;
+package com.invola.system.adapter.in.web.dto;
 
 import org.springframework.lang.NonNull;
 
