@@ -21,12 +21,17 @@ public class Story {
     @Getter
     private String title;
     @Getter
-    private double avgRate;
+    private Double avgRate;
     @Getter
-    private List<StoryRate> rates;
+    private List<StoryReview> rates;
 
     private Optional<StoryId> getId() {
         return Optional.ofNullable(storyId);
+    }
+
+    public void updateAvergateRate(Double newRate) {
+        Double totalRates = newRate + rates.stream().map(r -> r.getRateValue()).reduce(Double.valueOf(0), Double::sum);
+        avgRate = totalRates / rates.size();
     }
 
     @Value

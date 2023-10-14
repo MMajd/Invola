@@ -1,5 +1,8 @@
 package com.invola.system.application.port.out;
 
-public interface LoadStoryPort {
+import com.invola.system.application.domain.model.Story;
+import com.invola.system.application.domain.model.Story.StoryId;
 
+public interface LoadStoryPort {
+    Story loadStory(StoryId storyId);
 }
