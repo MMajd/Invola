@@ -25,7 +25,7 @@ public class Story {
     @Getter
     private List<StoryReview> rates;
 
-    private Optional<StoryId> getId() {
+    public Optional<StoryId> getId() {
         return Optional.ofNullable(storyId);
     }
 

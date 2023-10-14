@@ -9,7 +9,7 @@ package com.invola.algo;
  */
 
 public class Solution {
-    private final class ListNode {
+    public static final class ListNode {
         int value;
         ListNode next;
     }

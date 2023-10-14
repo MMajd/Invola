@@ -1,6 +1,5 @@
 package com.invola.ds;
 
-
 /** 
  * 
  * Q1.2: 
@@ -28,51 +27,52 @@ package com.invola.ds;
  * Q1.1
  */
 public class Queue {
-    private static final QUEUE_SIZE = 1000; 
+    private static final int QUEUE_SIZE = 1000;
     private int head;
     private int tail;
-    private int size; 
-    private int[] queue; 
+    private int size;
+    private int[] queue;
 
-    Public Queue() { 
-        size = 0; 
-        head = 0; 
-        tail = -1; 
-        queue = new int[QUEUE_SIZE]; 
+    public Queue() {
+        size = 0;
+        head = 0;
+        tail = -1;
+        queue = new int[QUEUE_SIZE];
     }
 
-    /** 
-     * O(n) = 1; 
+    /**
+     * O(n) = 1;
      */
-    public boolean enqueue(int value) { 
-        if (isFull()) return false; 
-        
-        tail = (tail + 1) % QUEUE_SIZE;
-        queue[tail] = value; 
-        size += 1; 
+    public boolean enqueue(int value) {
+        if (isFull())
+            return false;
 
-        return true; 
+        tail = (tail + 1) % QUEUE_SIZE;
+        queue[tail] = value;
+        size += 1;
+
+        return true;
     }
 
     /*
-     * O(n) = 1; 
+     * O(n) = 1;
      */
-    public int dequeue() { 
-        if (isEmpty()) { 
-            throw new Exception("Queue is empty"); 
+    public int dequeue() {
+        if (isEmpty()) {
+            throw new RuntimeException("Queue is empty");
         }
-        int answer = queue[head]; 
-        head = (head + 1) % QUEUE_SIZE; 
-        size -= 1; 
-        return answer; 
+        int answer = queue[head];
+        head = (head + 1) % QUEUE_SIZE;
+        size -= 1;
+        return answer;
     }
 
     public boolean isEmpty() {
-        return size == 0; 
+        return size == 0;
     }
 
-    public boolean isFull() { 
-        return size == QUEUE_SIZE; 
+    public boolean isFull() {
+        return size == QUEUE_SIZE;
     }
 
 }
